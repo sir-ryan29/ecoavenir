@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoAvenir - Association pour la protection de l'environnement">
+    <title>EcoAvenir - Accueil</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #28a745;
+            color: white;
+            padding: 50px 0;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+        }
+
+        .header p {
+            font-size: 1.8rem;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+        }
+
+        main {
+            margin-top: 20px;
+        }
+
+        section h2 {
+            margin-top: 20px;
+            font-size: 1.75rem;
+            color: #28a745;
+        }
+
+        .event {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #28a745;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            transition: background-color 0.3s;
+        }
+
+        .event:hover {
+            background-color: #e9f5e9;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">EcoAvenir</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="events.html">Événements</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <header class="header">
+        <div class="container text-center">
+            <h1>Bienvenue chez EcoAvenir</h1>
+            <p>Une association dédiée à la protection de l'environnement.</p>
+        </div>
+    </header>
+    
+    <main class="container my-5">
+        <section>
+            <h2>Qui sommes-nous ?</h2>
+            <p>EcoAvenir est une association qui œuvre pour la protection de l'environnement en sensibilisant le public à des pratiques écologiques et en organisant des événements pour promouvoir le développement durable.</p>
+        </section>
+        <button id="alertButton" class="btn btn-success mt-3">Cliquez ici pour en savoir plus</button>
+        <div id="bottom" style="margin-top: 100px;">Vous êtes en bas de la page!</div>
+    </main>
+    
+    <footer class="footer bg-light text-center py-3">
+        <p>&copy; 2024 EcoAvenir. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Afficher une alerte lors du clic sur le bouton
+        document.getElementById('alertButton').addEventListener('click', function() {
+            alert('Merci de votre intérêt pour EcoAvenir!');
+        });
+
+        // Défilement fluide
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Changer la couleur de fond des événements au survol
+        document.querySelectorAll('.event').forEach(event => {
+            event.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#e9f5e9';
+            });
+
+            event.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '';
+            });
+        });
+    </script>
+</body>
+</html>
