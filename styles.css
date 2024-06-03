@@ -1,0 +1,33 @@
+<style>
+ body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #28a745;
+    color: white;
+    padding: 50px 0;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+}
+
+.header p {
+    font-size: 1.8rem;
+}
+
+.footer {
+    background-color: #f8f9fa;
+}
+
+main {
+    margin-top: 20px;
+}
+
+section h2 {
+    margin-top: 20px;
+    font-size: 1.75rem;
+    color: #28a745;
+}
+</style>
